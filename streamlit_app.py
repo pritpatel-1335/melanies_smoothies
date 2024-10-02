@@ -36,6 +36,7 @@ if ingredients_list:
     ingredients_string = ''
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen
+        st.subheader(fruit_chosen=' Nutrition Information')
         ingredients_string += ' '
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_chosen.lower())
         # st.text(fruityvice_response.json())
